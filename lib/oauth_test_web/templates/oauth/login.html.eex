@@ -1,0 +1,2 @@
+<h1> showing login </h1>
+<a class="btn btn-primary" href="<%= get_oauth_url() %>" role="button">Click here to login to google</a>
