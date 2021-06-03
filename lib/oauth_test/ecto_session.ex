@@ -19,7 +19,7 @@ defmodule Plug.Session.Ecto do
   def put(_conn, nil, a, _opts) do
     IO.inspect(a, label: "Table put new is")
     session = EctoQueries.new_session()
-    IO.inspect(session, label: "Fucking session")
+    IO.inspect(session, label: "Session")
     session |> Changeset.change(%{table: a}) |> EctoQueries.update_session() |> Map.get(:cookie)
   end
   def put(_conn, sid, a, _opts) do
